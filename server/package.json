@@ -17,6 +17,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "fastq": "^1.17.1",
+    "fm-data-api-client": "^1.4.0",
     "node-fetch": "^3.3.2"
   }
 }

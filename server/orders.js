@@ -1,3 +1,4 @@
+import { createPayload } from "./filemaker.js";
 // Simulate a database API
 // Keep in mind that the order management process it's entirely your choice
 const orders = new Map();
@@ -18,6 +19,7 @@ const createOrder = (revolutOrder) => {
   orders.set(orderId, order);
 
   console.log(`Order saved with id: ${orderId}`);
+  createPayload(JSON.stringify(order));
   return order;
 };
 
@@ -52,6 +54,7 @@ const updateOrderStatus = (orderId, newStatus) => {
     const updatedOrderData = { ...orderData, status: newStatus };
     orders.set(orderId, updatedOrderData);
 
+    createPayload(JSON.stringify(orders));
     console.log(
       `Order status updated for orderId: ${orderId} - New status: ${newStatus}`,
     );
