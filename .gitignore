@@ -176,3 +176,4 @@ $RECYCLE.BIN/
 
 # https://zeit.co/home
 .now
+.vercel
