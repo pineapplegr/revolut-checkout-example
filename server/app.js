@@ -8,7 +8,6 @@ import fetch from "node-fetch";
 import { validateSignature, validateTimestamp } from "./helpers.js";
 import orders from "./orders.js";
 import ordersQueue from "./queue/orders-queue.js";
-import { createPayload } from "./filemaker.js";
 
 const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -199,6 +198,6 @@ app.use((req, res) => {
 
 /* ################ end CLIENT ENDPOINTS ################ */
 
-app.listen(process.env.PORT || 5177, () =>
-  console.log(`Server running on http://localhost:${process.env.PORT || 5177}`),
+app.listen(process.env.PORT || 3000, () =>
+  console.log(`Server running on http://localhost:${process.env.PORT || 3000}`),
 );
